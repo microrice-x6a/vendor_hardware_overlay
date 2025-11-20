@@ -14,4 +14,18 @@ ifeq ($(shell test $(PLATFORM_SDK_VERSION) -ge 31 && echo OK),OK)
 LOCAL_ENFORCE_USES_LIBRARIES := false
 endif
 
+LOCAL_OVERRIDES_PACKAGES := \
+    ExactCalculator \
+    Email \
+    Exchange2 \
+    com.android.emailcommon \
+    Calendar \
+    CarrierDefaultApp \
+    SimAppDialog \
+    WAPPushManager \
+    SecureElement \
+    BlockedNumberProvider \
+    CallLogBackup \
+    messaging
+
 include $(BUILD_PREBUILT)
